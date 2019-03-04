@@ -58,7 +58,7 @@ public class HierarchyDev : MonoBehaviour {
     static void CreatePanelScripts()
     {
         string scripts = "/**\n * Copyright(C) 2019 by #Betech上海赢赞数字科技有限公司#\n * All rights reserved.\n *FileName:     #测试项目#\n *Author:       #Laughing#\n *Version:      #v1.0#\n *UnityVersion：#v2017.4.3#\n *Date:         #20190128#\n *Description:\n    *History:\n*/ " 
-            +"\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.EventSystems;\n\npublic class " +
+            +"\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.EventSystems;\nusing RDFW;\n\npublic class " +
             Selection.activeGameObject.name + " : UIBase {\n    public void Awake()\n    {\n        PanelInit();\n    }\n    public override void PanelInit()\n    {\n        base.PanelInit();\n    }\n    public override void OnActive()\n    {\n        base.OnActive();\n    }\n    public override void OnInActive()\n    {\n        base.OnInActive();\n    }\n}";
 
         File.WriteAllText(Application.dataPath + "/Scripts/" + Selection.activeGameObject.name + ".cs",scripts);
